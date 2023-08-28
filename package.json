@@ -1,0 +1,17 @@
+{
+  "name": "quick-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "cplepage",
+  "type": "module",
+  "dependencies": {
+    "parse5": "^7.1.2",
+    "sass": "^1.66.1",
+    "ws": "^8.13.0"
+  }
+}
