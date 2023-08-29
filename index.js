@@ -50,6 +50,8 @@ const server = http.createServer((req, res) => {
 })
 server.listen(8080);
 
+console.log("Running at http://localhost:8080");
+
 function setContentEditableRecursively(node) {
     node.attrs?.push({
         name: "contenteditable",
@@ -128,7 +130,7 @@ document.body.addEventListener("input", () => {
         })
     }, 2000);
 })
-const ws = new WebSocket("ws://" + window.location.host);
+const ws = new WebSocket(\`ws\$\{ window.location.protocol === "https:" ? "s" : "" \}://\` + window.location.host);
 ws.onmessage = (e) => {
     if(e.data === "style"){
         const style = document.querySelector("link");
